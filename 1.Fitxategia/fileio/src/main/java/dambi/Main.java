@@ -17,7 +17,7 @@ public class Main {
         String text = in.nextLine();
 
         try {
-            String directoryPath = "C:\\Users\\alonso.aimar\\Desktop\\Datu-Atzipena\\fileio\\karpeta_berriak\\" + path;
+            String directoryPath = "C:\\Users\\alonso.aimar\\Desktop\\Datu-Atzipena23-24\\1.Fitxategia\\fileio\\karpeta_berriak\\" + path;
             new File(directoryPath).mkdirs();
             String filePath = directoryPath + "\\" + text + ".txt";
             File file = new File(filePath);
