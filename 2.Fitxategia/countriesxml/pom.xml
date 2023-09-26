@@ -16,6 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>20</maven.compiler.source>
     <maven.compiler.target>20</maven.compiler.target>
+     <exec.mainClass>dambi.App</exec.mainClass>
   </properties>
 
   <dependencies>
@@ -28,8 +29,7 @@
     <artifactId>jakarta.xml.bind-api</artifactId>
 
     <version>4.0.1</version>
-
-</dependency>
+    </dependency>
 
 <!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl -->
 
@@ -94,5 +94,13 @@
         </plugin>
       </plugins>
     </pluginManagement>
+     <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.fxml</include>
+                </includes>
+            </resource>      
+        </resources>
   </build>
 </project>
