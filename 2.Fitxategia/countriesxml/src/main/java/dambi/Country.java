@@ -2,6 +2,7 @@ package dambi;
 
 import java.time.LocalDate;
 
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
@@ -29,6 +30,7 @@ public class Country
     String    continent;
 
     int       population;
+    int importance;
 
     public int getPopulation()
     {
@@ -45,34 +47,24 @@ public class Country
     {
         return name;
     }
+ @XmlAttribute(name = "importance", required = true)
+    public void setImportance(int importance) {
+        this.importance = importance;
+    }
 
+    public int getImportance(){
+        return this.importance;
+    }
     @XmlElement( name = "Country_Name" )
     public void setName( String name )
     {
         this.name = name;
     }
 
-    @Override
-    public String toString()
-    {
-        StringBuffer str = new StringBuffer( "Name: " + getName() + "\n" );
-        str.append( "Capital: " + getCapital() + "\n" );
-
-        if( getFoundation() != null )
-        {
-            str.append( getFoundation().toString() );
-            str.append( "\n" );
-        }
-
-        if( getContinent() != null )
-        {
-            str.append( getContinent().toString() );
-            str.append( "\n" );
-        }
-
-        return str.toString();
+    public String toString(){
+        String message = "\nName: " + this.name + "\nCapital: " + this.capital + "\nImportance: " + this.importance + "\nFoundation: " + this.foundation + "\nContinent: " + this.continent;
+        return message;
     }
-
     public String getCapital()
     {
         return capital;
