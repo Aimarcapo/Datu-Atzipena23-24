@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Countries>
+    <mendi probintzia="Araba">
+        <Mendi_Izen>Albertia</Mendi_Izen>
+        <Altuera>868</Altuera>
+    </mendi>
+    <mendi probintzia="Bizkaia">
+        <Mendi_Izen>Alluitz</Mendi_Izen>
+        <Altuera>1034</Altuera>
+    </mendi>
+    <mendi probintzia="Bizkaia">
+        <Mendi_Izen>Anboto</Mendi_Izen>
+        <Altuera>1331</Altuera>
+    </mendi>
+    <mendi probintzia="Araba">
+        <Mendi_Izen>Aratz</Mendi_Izen>
+        <Altuera>1443</Altuera>
+    </mendi>
+    <mendi probintzia="Gipuzkoa">
+        <Mendi_Izen>Arrate</Mendi_Izen>
+        <Altuera>556</Altuera>
+    </mendi>
+    <mendi probintzia="Gipuzkoa">
+        <Mendi_Izen>Hernio</Mendi_Izen>
+        <Altuera>1075</Altuera>
+    </mendi>
+    <mendi probintzia="Araba">
+        <Mendi_Izen>Ipizte</Mendi_Izen>
+        <Altuera>1062</Altuera>
+    </mendi>
+    <mendi probintzia="Araba">
+        <Mendi_Izen>Jarindo</Mendi_Izen>
+        <Altuera>896</Altuera>
+    </mendi>
+    <mendi probintzia="Araba">
+        <Mendi_Izen>Kapildui</Mendi_Izen>
+        <Altuera>1177</Altuera>
+    </mendi>
+    <mendi probintzia="Gipuzkoa">
+        <Mendi_Izen>Karakate</Mendi_Izen>
+        <Altuera>749</Altuera>
+    </mendi>
+    <mendi probintzia="Gipuzkoa">
+        <Mendi_Izen>Kurtzebarri</Mendi_Izen>
+        <Altuera>1133</Altuera>
+    </mendi>
+    <mendi probintzia="Nafarroa">
+        <Mendi_Izen>Lapazarra</Mendi_Izen>
+        <Altuera>1785</Altuera>
+    </mendi>
+    <mendi probintzia="Araba">
+        <Mendi_Izen>Mirutegi</Mendi_Izen>
+        <Altuera>1166</Altuera>
+    </mendi>
+    <mendi probintzia="Bizkaia">
+        <Mendi_Izen>Mugarra</Mendi_Izen>
+        <Altuera>964</Altuera>
+    </mendi>
+    <mendi probintzia="Bizkaia">
+        <Mendi_Izen>Oiz</Mendi_Izen>
+        <Altuera>1029</Altuera>
+    </mendi>
+    <mendi probintzia="Araba">
+        <Mendi_Izen>Soila</Mendi_Izen>
+        <Altuera>993</Altuera>
+    </mendi>
+    <mendi probintzia="Araba">
+        <Mendi_Izen>Toloño</Mendi_Izen>
+        <Altuera>1263</Altuera>
+    </mendi>
+    <mendi probintzia="Nafarroa">
+        <Mendi_Izen>Txamantxoia</Mendi_Izen>
+        <Altuera>1945</Altuera>
+    </mendi>
+</Countries>

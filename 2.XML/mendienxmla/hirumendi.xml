@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Countries>
+    <mendi probintzia="Probintzia1">
+        <Mendi_Izen>Mendi1</Mendi_Izen>
+        <Altuera>1000</Altuera>
+    </mendi>
+    <mendi probintzia="Probintzia2">
+        <Mendi_Izen>Mendi2</Mendi_Izen>
+        <Altuera>1200</Altuera>
+    </mendi>
+    <mendi probintzia="Probintzia3">
+        <Mendi_Izen>Mendi3</Mendi_Izen>
+        <Altuera>800</Altuera>
+    </mendi>
+</Countries>

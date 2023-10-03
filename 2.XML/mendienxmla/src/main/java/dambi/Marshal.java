@@ -35,7 +35,7 @@ public class Marshal {
         marshalAndSave(hiruMendiak, "mendiakaltueraoinatan.xml");
 
         // XML fitxategia "gipuzkoakomendiak.xml" izenpean gorde
-        // ...
+          marshalAndSave(hiruMendiak, "gipuzkoakomendiak.xml");
     }
 
     private static void marshalAndSave(List<Mendi> mendiak, String fileName) {

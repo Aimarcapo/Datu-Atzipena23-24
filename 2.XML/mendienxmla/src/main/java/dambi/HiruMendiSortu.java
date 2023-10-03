@@ -36,7 +36,7 @@ public class HiruMendiSortu {
 
             // Create a Marshaller
             Marshaller marshaller = context.createMarshaller();
-
+            marshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
             // Marshal the list of Mendi objects to an XML file
             Mendiak wrapper = new Mendiak();
             wrapper.setMendiak(hiruMendiak);

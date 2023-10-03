@@ -33,6 +33,8 @@ public class Mendi {
     public void setAltuera(int altuera) {
         this.altuera = altuera;
     }
+    
+  
 
     public String getIzen() {
         return izen;
