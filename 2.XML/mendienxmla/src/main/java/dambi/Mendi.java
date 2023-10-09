@@ -1,12 +1,9 @@
 package dambi;
 
-import java.time.LocalDate;
-
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Country containing a name, a capital city, a foundation date and the
@@ -33,8 +30,6 @@ public class Mendi {
     public void setAltuera(int altuera) {
         this.altuera = altuera;
     }
-    
-  
 
     public String getIzen() {
         return izen;
