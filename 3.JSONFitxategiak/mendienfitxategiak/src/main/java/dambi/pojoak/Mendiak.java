@@ -1,6 +1,7 @@
-package dambi;
+package dambi.pojoak;
 
 import java.util.List;
+
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
@@ -20,20 +21,13 @@ public class Mendiak
     public List<Mendi> getMendiak() {
         return mendiak;
     }
-
+public List<Mendi> getMendiak(int i) {
+        return mendiak;
+    }
     public void setMendiak(List<Mendi> mendiak) {
         this.mendiak = mendiak;
     }
 
-    /**
-     * This method is not used by jaxb, just used for business reasons. In the case that this class
-     * would be generated using xml schemas definitions, this method has to be added to the
-     * generated class or to some helper or util one
-     * 
-     * @param country
-     */
    
-
-
 
 }

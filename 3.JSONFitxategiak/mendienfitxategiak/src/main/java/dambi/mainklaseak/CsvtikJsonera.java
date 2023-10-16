@@ -1,4 +1,4 @@
-package dambi;
+package dambi.mainklaseak;
 
 public class CsvtikJsonera {
     
