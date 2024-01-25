@@ -17,55 +17,73 @@ import dambi.pojoak.Mendi;
 import dambi.pojoak.Mendiak;
 
 public class Jsona {
-    private String strFileIn;
-    private String strFileOut;
+    public String strFileIn;
+    public String strFileOut;
 
-    public void Jsona(String fileIn) {
-        this.strFileIn = fileIn;
+    /**
+     * Konstruktoreak parametro bakarra jasotzen badu,
+     * sarrera fitxategiaren izena jaso dugula suposatuko dugu.
+     */
+    public Jsona(String strFile) {
+        strFileIn = strFile;
     }
 
-    public void Jsona(String fileIn, String fileOut) {
-        this.strFileIn = fileIn;
-        this.strFileOut = fileOut;
+    /**
+     * Konstruktoreak parametro bi jasotzen baditu,
+     * lehengoa, sarrera fitxategiaren izena dela eta bigarrena irteerakoarena
+     * direla suposatuko dugu.
+     * Sarrera fitxategirik erabiliko ez badugu, kate hutsa erabiliko dugu lehen
+     * parametro moduan.
+     */
+    public Jsona(String strFileIn, String strFileOut) {
+        this.strFileIn = strFileIn;
+        this.strFileOut = strFileOut;
     }
 
     public Mendiak irakurri() {
-        Mendiak mendia = new Mendiak();
+        Mendiak mendiak = null;
         try {
             JsonReader reader = Json.createReader(new FileReader(strFileIn));
-            JsonStructure jStructure = reader.read();
-
-            JsonArray jArray = jStructure.asJsonArray();
-
+            JsonStructure jsonst = reader.read();
+            JsonArray jsonarray = jsonst.asJsonArray();
+            mendiak = new Mendiak();
+            for (int i = 0; i < jsonarray.size(); i++) {
+                JsonObject jsonobj = jsonarray.getJsonObject(i);
+                Mendi mendi = new Mendi();
+                mendi.setId(jsonobj.getInt("id"));
+                mendi.setIzen(jsonobj.getString("mendia"));
+                mendi.setAltuera(jsonobj.getInt("altuera"));
+                mendi.setProbintzia(jsonobj.getString("probintzia"));
+                mendiak.add(mendi);
+            }
+            
         } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("Arazoak " + strFileIn + " fitxategia irakurtzerakoan.");
         }
-        return mendia;
-
+        return mendiak;
     }
 
     public int idatzi(Mendiak mendiak) {
-        try {
-            JsonArrayBuilder jsonArrayBuilder = Json.createArrayBuilder();
-            List<Mendi> mendia = mendiak.getMendiak();
-            for (Mendi mendi : mendia) {
-                JsonObject mendiJson = Json.createObjectBuilder()
-                        .add("id", mendi.getId())
-                        .add("izen", mendi.getIzen())
-                        .add("probintzia", mendi.getProbintzia())
-                        .add("altuera", mendi.getAltuera())
-                        .build();
-                jsonArrayBuilder.add(mendiJson);
-            }
-            JsonArray jsonArray = jsonArrayBuilder.build();
-            try (JsonWriter jsonWriter = Json.createWriter(new FileOutputStream(strFileOut))) {
-                jsonWriter.writeArray(jsonArray);
-            }
-            return 0;
-        } catch (FileNotFoundException e) {
-            System.out.println("Fitxategia ezin izan da sortu.");
-
-            return -1;
+        int mendiKopurua = 0;
+        JsonArray model = null;
+        JsonArrayBuilder jab = Json.createArrayBuilder();
+        for (Mendi m : mendiak.getMendiak()) {
+            jab.add(Json.createObjectBuilder()
+                    .add("id", m.getId())
+                    .add("mendia", m.getIzen())
+                    .add("altuera", m.getAltuera())
+                    .add("probintzia", m.getProbintzia())
+                    .build());
+            mendiKopurua++;
         }
+        model=jab.build();
+
+        try (JsonWriter jsonWriter = Json.createWriter(new FileOutputStream(strFileOut))) {
+            jsonWriter.writeArray(model);
+        } catch (FileNotFoundException fnfe) {
+            System.out.println("Fitxategia sortzerakoan arazoak.");
+        }
+        return mendiKopurua;
+
     }
 }

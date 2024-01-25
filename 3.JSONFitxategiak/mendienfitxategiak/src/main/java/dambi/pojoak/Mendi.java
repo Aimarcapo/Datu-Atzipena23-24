@@ -23,13 +23,7 @@ public class Mendi {
     private int id;
 
     
-    public Mendi(int id,String izen, String probintzia, int altuera){
-     this.id = id; 
-        this.izen = izen;
-        this.probintzia = probintzia;
-        this.altuera = altuera;
-       
-    }
+ 
 
 
     public String getIzen() {

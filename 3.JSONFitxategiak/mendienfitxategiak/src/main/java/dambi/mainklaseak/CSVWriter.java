@@ -1,4 +1,4 @@
-package dambi.mainklaseak;
+/* package dambi.mainklaseak;
 import java.util.ArrayList;
 import java.util.List;
 import dambi.atzipenekoak.Csva;
@@ -20,3 +20,4 @@ public class CSVWriter {
        System.out.println("Number of entries written: " + i);
         }
 }
+ */

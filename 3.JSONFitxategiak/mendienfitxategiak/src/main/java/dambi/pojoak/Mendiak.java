@@ -1,5 +1,6 @@
 package dambi.pojoak;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.xml.bind.annotation.XmlElement;
@@ -26,6 +27,13 @@ public List<Mendi> getMendiak(int i) {
     }
     public void setMendiak(List<Mendi> mendiak) {
         this.mendiak = mendiak;
+    }
+    public void add(Mendi mendi) {
+        if (this.mendiak == null) {
+            this.mendiak = new ArrayList<Mendi>();
+        }
+        this.mendiak.add(mendi);
+
     }
 
    

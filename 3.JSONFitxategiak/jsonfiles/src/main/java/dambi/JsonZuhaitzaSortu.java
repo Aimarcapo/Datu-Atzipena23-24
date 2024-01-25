@@ -25,7 +25,7 @@ public class JsonZuhaitzaSortu {
               .add("type", "home")
               .add("number", "222-222-2222")))
         .build();
-try (JsonWriter jsonWriter = Json.createWriter(new FileOutputStream("data/jsondatabat.json"))) {
+try (JsonWriter jsonWriter = Json.createWriter(new FileOutputStream("jsonfiles/data/jsondatabat.json"))) {
    jsonWriter.writeObject(model);
 }
 catch (FileNotFoundException e) {
